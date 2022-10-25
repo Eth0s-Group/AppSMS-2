@@ -1,0 +1,8 @@
+class Module {
+    constructor() {
+
+    }
+    trigger() {
+        
+    }
+}
