@@ -57,7 +57,8 @@ Your class for individual messages.
         ```js
             {
                 from: <String> //Who the message is from (any kind of string identifier).
-                to: <String> //Who the message was to (any kind of string identifier).  If to a group including the bot make the "to" be something that represents the bot.
+                to: <String> /*Who the message was to (any kind of string identifier).
+                If to a group including the bot make the "to" be something that represents the bot.*/
                 content: <String> //String representation of text content of message.
             }
         ```
