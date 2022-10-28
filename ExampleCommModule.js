@@ -14,5 +14,12 @@ class CommunicationsModule extends EventEmitter{
     
 }
 class CommunicationsModuleMessage {
+    constructor() {
+
+    }
+
+
+}
+class CommunicationsModuleImageMessage extends CommunicationsModuleMessage {
 
 }
