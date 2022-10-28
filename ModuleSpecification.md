@@ -53,7 +53,7 @@ Your class for individual messages.
 > Yes, I intentionally left out timestamps.  I do not see any use for them being standard at this time.
 
 - ## `Constructor`
-    - `Parameters`
+    - Parameters
         ```js
             {
                 from: <String> //Who the message is from (any kind of string identifier).
