@@ -14,26 +14,26 @@ Your class for implementing a module to communicate with a new platform.
     - `Properties`
         - `me <String>`: A string that represents the bot's user identification.
 - ## `Methods`
-    - $\colorbox{darkblue}{async}$ `send`: Sends a text message.
+    - ### $\colorbox{darkblue}{async}$ `send`: Sends a text message.
         - `Parameters`
             1. `UserID <String>`: A string that represents who the message should be sent to.
             2. `Message <String>`: A UTF-8 string containing the message to be sent.
         - `Returns`: $\colorbox{darkgreen}{Message}$ Object or compatible.  Object should represent the message that was sent.
-    - $\colorbox{darkblue}{async}$ `send_image` $\colorbox{#805300}{Optional}$: Send an image.  We acknowledge that some platforms may not support images.
+    - ### $\colorbox{darkblue}{async}$ `send_image` $\colorbox{#805300}{Optional}$: Send an image.  We acknowledge that some platforms may not support images.
         - `Parameters`
             1. `UserID <String>`:  A string that represents who the message should be sent to.
             2. `Message <String>`: A string represental the textual portion of the message to be sent.
             3. `Image <Buffer/Readable Stream>`: Image file to be sent.
             4. `Fallback <String>`: A message to be sent with a textual representation of the image in case the image cannot be sent.
         - `Returns`: $\colorbox{darkgreen}{MultimediaMessage}$ Object or compatible.  Object should represent the message that was sent.
-    - $\colorbox{darkblue}{async}$ `send_video` $\colorbox{#805300}{Optional}$: Send a video.  We acknowledge that some platforms may not support video.
+    - ### $\colorbox{darkblue}{async}$ `send_video` $\colorbox{#805300}{Optional}$: Send a video.  We acknowledge that some platforms may not support video.
         - `Parameters`
             1. `UserID <String>`:  A string that represents who the message should be sent to.
             2. `Message <String>`: A string represental the textual portion of the message to be sent.
             3. `Video <Buffer/Readable Stream>`: Video file to be sent.
             4. `Fallback <String>`: A message to be sent with a textual representation of the image in case the image cannot be sent.
         - `Returns`: $\colorbox{darkgreen}{MultimediaMessage}$ Object or compatible.  Object should represent the message that was sent.
-    - $\colorbox{darkblue}{async}$ `send_file` $\colorbox{#805300}{Optional}$: Send a file.  We acknowledge that some platforms may not support files.
+    - ### $\colorbox{darkblue}{async}$ `send_file` $\colorbox{#805300}{Optional}$: Send a file.  We acknowledge that some platforms may not support files.
         - `Parameters`
             1. `UserID <String>`:  A string that represents who the message should be sent to.
             2. `Message <String>`: A string represental the textual portion of the message to be sent.
