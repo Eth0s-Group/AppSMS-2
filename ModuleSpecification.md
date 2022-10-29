@@ -86,4 +86,6 @@ Your class for individual messages.
             4. `Fallback <String>`: A message to be sent with a textual representation of the file in case the image cannot be sent.
         - `Returns`: $\colorbox{darkgreen}{MultimediaMessage}$ Object or compatible.  Object should represent the message that was sent.
 
-# `MultimediaMessage`
+# `MultimediaMessage` Class `Extends` $\colorbox{darkgreen}{Message}$
+- ## All Message attributes apply
+
