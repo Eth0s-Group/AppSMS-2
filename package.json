@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "mime": "^3.0.0",
+    "openweather-apis": "^4.4.2"
+  }
+}
