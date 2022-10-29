@@ -3,7 +3,7 @@ A Node.JS version of the original AppSMS.
 
 # How to
 ```bash
-npm install mime openweather-apis
+npm install
 node server.js
 ```
 
