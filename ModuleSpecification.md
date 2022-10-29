@@ -79,7 +79,7 @@ Your class for individual messages.
             3. `Video <Buffer/Readable Stream>`: Video file to be sent.
             4. `Fallback <String>`: A message to be sent with a textual representation of the image in case the image cannot be sent.
         - `Returns`: $\colorbox{darkgreen}{MultimediaMessage}$ Object or compatible.  Object should represent the message that was sent.
-    - #### $\colorbox{darkblue}{async}$ `reply_file` $\colorbox{#805300}{Optional}$: Send a file.  We acknowledge that some platforms may not support files.
+    - ### $\colorbox{darkblue}{async}$ `reply_file` $\colorbox{#805300}{Optional}$: Send a file.  We acknowledge that some platforms may not support files.
         - `Parameters`
             1. `Message <String>`: A string represental the textual portion of the message to be sent.
             3. `File <Buffer/Readable Stream>`: File to be sent.
