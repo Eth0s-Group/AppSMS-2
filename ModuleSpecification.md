@@ -50,9 +50,6 @@ Your class for individual messages.
             2. `Attachments <Attachment[]>` : An array of $\colorbox{darkgreen}{Attachment}$ objects defining attachments to be attached to the message or compatible.
         - `Returns`: $\colorbox{darkgreen}{Message}$ Object or compatible.  Object should represent the message that was sent.
 
-# `MultimediaMessage` Class `Extends` $\colorbox{darkgreen}{Message}$
-- ## All Message attributes apply
-
 # `Attachment` Typedef
 
 Your type for defining options of elements to include in a message.
