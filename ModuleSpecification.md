@@ -18,28 +18,8 @@ Your class for implementing a module to communicate with a new platform.
         - `Parameters`
             1. `UserID <String>`: A string that represents who the message should be sent to.
             2. `Message <String>`: A UTF-8 string containing the message to be sent.
+            3. `Attachments <Attachment[]>` : An array of $\colorbox{darkgreen}{Attachment}$ objects defining attachments to be attached to the message or compatible.
         - `Returns`: $\colorbox{darkgreen}{Message}$ Object or compatible.  Object should represent the message that was sent.
-    - ### $\colorbox{darkblue}{async}$ `send_image` $\colorbox{#805300}{Optional}$: Send an image.  We acknowledge that some platforms may not support images.
-        - `Parameters`
-            1. `UserID <String>`:  A string that represents who the message should be sent to.
-            2. `Message <String>`: A string represental the textual portion of the message to be sent.
-            3. `Image <Buffer/Readable Stream>`: Image file to be sent.
-            4. `Fallback <String>`: A message to be sent with a textual representation of the image in case the image cannot be sent.
-        - `Returns`: $\colorbox{darkgreen}{MultimediaMessage}$ Object or compatible.  Object should represent the message that was sent.
-    - ### $\colorbox{darkblue}{async}$ `send_video` $\colorbox{#805300}{Optional}$: Send a video.  We acknowledge that some platforms may not support video.
-        - `Parameters`
-            1. `UserID <String>`:  A string that represents who the message should be sent to.
-            2. `Message <String>`: A string represental the textual portion of the message to be sent.
-            3. `Video <Buffer/Readable Stream>`: Video file to be sent.
-            4. `Fallback <String>`: A message to be sent with a textual representation of the image in case the image cannot be sent.
-        - `Returns`: $\colorbox{darkgreen}{MultimediaMessage}$ Object or compatible.  Object should represent the message that was sent.
-    - ### $\colorbox{darkblue}{async}$ `send_file` $\colorbox{#805300}{Optional}$: Send a file.  We acknowledge that some platforms may not support files.
-        - `Parameters`
-            1. `UserID <String>`:  A string that represents who the message should be sent to.
-            2. `Message <String>`: A string represental the textual portion of the message to be sent.
-            3. `File <Buffer/Readable Stream>`: File to be sent.
-            4. `Fallback <String>`: A message to be sent with a textual representation of the file in case the image cannot be sent.
-        - `Returns`: $\colorbox{darkgreen}{MultimediaMessage}$ Object or compatible.  Object should represent the message that was sent.
 
 - ## `Events`
     - `"message"`: The message event indicates a new message has been received.  Should include an instance of message or a compatible object.  After ready, should fire all unread messages that were missed since the last launch if applicable.
@@ -67,25 +47,16 @@ Your class for individual messages.
         - `Parameters`
             1. `Message <String>`: A UTF-8 string containing the message to be sent.
         - `Returns`: $\colorbox{darkgreen}{Message}$ Object or compatible.  Object should represent the message that was sent.
-    - ### $\colorbox{darkblue}{async}$ `reply_image` $\colorbox{#805300}{Optional}$: Send an image.  We acknowledge that some platforms may not support images.
-        - `Parameters`
-            1. `Message <String>`: A string represental the textual portion of the message to be sent.
-            3. `Image <Buffer/Readable Stream>`: Image file to be sent.
-            4. `Fallback <String>`: A message to be sent with a textual representation of the image in case the image cannot be sent.
-        - `Returns`: $\colorbox{darkgreen}{MultimediaMessage}$ Object or compatible.  Object should represent the message that was sent.
-    - ### $\colorbox{darkblue}{async}$ `reply_video` $\colorbox{#805300}{Optional}$: Send a video.  We acknowledge that some platforms may not support video.
-        - `Parameters`
-            1. `Message <String>`: A string represental the textual portion of the message to be sent.
-            3. `Video <Buffer/Readable Stream>`: Video file to be sent.
-            4. `Fallback <String>`: A message to be sent with a textual representation of the image in case the image cannot be sent.
-        - `Returns`: $\colorbox{darkgreen}{MultimediaMessage}$ Object or compatible.  Object should represent the message that was sent.
-    - ### $\colorbox{darkblue}{async}$ `reply_file` $\colorbox{#805300}{Optional}$: Send a file.  We acknowledge that some platforms may not support files.
-        - `Parameters`
-            1. `Message <String>`: A string represental the textual portion of the message to be sent.
-            3. `File <Buffer/Readable Stream>`: File to be sent.
-            4. `Fallback <String>`: A message to be sent with a textual representation of the file in case the image cannot be sent.
-        - `Returns`: $\colorbox{darkgreen}{MultimediaMessage}$ Object or compatible.  Object should represent the message that was sent.
 
 # `MultimediaMessage` Class `Extends` $\colorbox{darkgreen}{Message}$
 - ## All Message attributes apply
 
+# `Attachment` Typedef
+
+Your type for defining options of elements to include in a message.
+
+- ## `Properties`
+    - ### `name <String>`: Name of the file.
+    - ### `file <Buffer/Readable Stream>`: The file data for the attachment to be sent.
+    - ### `mimeType <String>`: `String` MIME type of the file.
+    - ### `alt <String>`: The `String` to be displayed if the file can't be sent.
