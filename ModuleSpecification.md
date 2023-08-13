@@ -46,6 +46,7 @@ Your class for individual messages.
     - ### $\colorbox{darkblue}{async}$ `reply`: Sends a text message.
         - `Parameters`
             1. `Message <String>`: A UTF-8 string containing the message to be sent.
+            2. `Attachments <Attachment[]>` : An array of $\colorbox{darkgreen}{Attachment}$ objects defining attachments to be attached to the message or compatible.
         - `Returns`: $\colorbox{darkgreen}{Message}$ Object or compatible.  Object should represent the message that was sent.
 
 # `MultimediaMessage` Class `Extends` $\colorbox{darkgreen}{Message}$
