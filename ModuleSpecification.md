@@ -40,6 +40,7 @@ Your class for individual messages.
                 to: <String> /*Who the message was to (any kind of string identifier).
                 If to a group including the bot make the "to" be something that represents the bot.*/
                 content: <String> //String representation of text content of message.
+                attachments: <Attachment[]> //Attachment objects representing attachments sent with the message. (Optional)
             }
         ```
 - ## `Methods`
